@@ -1,10 +1,13 @@
-- 👋 Hi, I’m @fahizfaz
-- 👀 I’m interested in tech and programming
-- 🌱 I’m currently learning Laravel
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me fahizfaz@gmail.com
+Job Board
 
-<!---
-fahizfaz/fahizfaz is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+A simple website to post and apply jobs.
+
+Setup:
+
+Please set a .env and set the credentials.
+
+Also run command php artisan storage:link
+
+All the files uploaded are stored in app/public/uploads folder.
+
+If any isuue feel free to contact me @ fahizfaz@gmail.com
