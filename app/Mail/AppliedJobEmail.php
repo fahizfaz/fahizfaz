@@ -28,7 +28,10 @@ class AppliedJobEmail extends Mailable
      */
     public function build()
     {
-        return $this->text('User applied for a job');
+        return $this->text('User applied for a job')
+                    ->subject('Job Application)
+                    ->from(env('ADMIN_MAIL_ADDRESS'));
+            
 
     }
 }
