@@ -121,13 +121,10 @@ class JobController extends Controller
         $resume->move(public_path().'/uploads', $job_application->resume); 
 
         $candidate_name = array('name'=> $request->name);
+        
+        $to = env(ADMIN_MAIL_ADDRESS);
 
-        //Mail::to($request->email)->queue(new AppliedJobEmail()); Or
-
-        Mail::send(['text'=>'User applied for a job'], $candidate_name, function($message, $request) {
-            $message->to($request->email, $request->name)->subject('Job Application');
-            $message->from('admin@gmail.com','Admin'); //set it in .env
-         });
+        Mail::to($to)->queue(new AppliedJobEmail());
 
         return redirect()->back()->withSuccess('Applied for job succesfully');
     }  
